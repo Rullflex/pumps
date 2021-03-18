@@ -1,0 +1,70 @@
+mixin header(navCurrent = 0)
+	-
+		var navList = [
+			{
+				name: 'Главная',
+				anchor: '/'
+			},
+			{
+				name: 'О нас',
+				anchor: aboutPageLink
+			},
+			{
+				name: 'Услуги',
+				anchor: servicesPageLink
+			},
+			{
+				name: 'Стоимость ремонта',
+				anchor: repaircostPageLink
+			},
+			{
+				name: 'Как мы работаем',
+				anchor: howweworkPageLink
+			},
+			{
+				name: 'Контакты',
+				anchor: contactsPageLink
+			}
+		]
+	header.header 
+		.container 
+			.header1
+				nav.uk-navbar
+					.uk-navbar-left
+						a(href="/")
+							img.img-logo.uk-logo(src=`${modules}logo.svg` alt=companyName)
+					.uk-navbar-right
+						.d-flex.d-lg-none
+							a.uk-icon(href="#")
+								- for (var x = 0; x < 4; x++) 
+									i
+							.uk-navbar-dropdown(data-uk-dropdown="mode: click; pos: bottom-justify; boundary: .header; boundary-align: true; animation: uk-animation-slide-top-small; duration: 300")
+								.uk-nav.uk-navbar-dropdown-nav
+									ul.uk-nav
+										each item, idx in navList 
+											li
+												a(href=item.anchor class=`${navCurrent == idx + 1 ? `active` : ``}`)= item.name
+									.header__cnt
+										a.link-phone(href=phoneLink)= phoneNumber
+										a.header__cnt-wa(href=waLink)
+											+icon(`social-wa`)
+									.header__gap 
+										span ПН-ВС 9:00-21:00
+									a.header__btn.uk-button.btn-outline-primary(href="#callback" data-uk-toggle="") Обратный звонок
+						.d-none.d-lg-flex
+							.header__adress #[strong Адрес:] г. Москва,#[br] 3-й Угрешский проезд, 15
+							.header__cnt
+								a.link-phone(href=phoneLink)= phoneNumber
+								.header__gap 
+									span ПН-ВС 9:00-21:00
+							a.header__cnt-wa(href=waLink)
+								+icon(`social-wa`)
+							a.header__btn.uk-button.btn-outline-primary(href="#callback" data-uk-toggle="") Обратный звонок
+			.header2.d-none.d-lg-block(style="background: white")
+				nav.uk-navbar.d-none.d-lg-flex
+					a.header2__logo(href="/")
+						img.img-logo.uk-logo(src=`${modules}logo.svg` alt=companyName)
+					ul.uk-nav
+						each item, idx in navList 
+							li
+								a(href=item.anchor class=`${navCurrent == idx + 1 ? `active` : ``}`)= item.name

@@ -1,0 +1,47 @@
+.input {
+    $self: &;
+    display: block;
+    transition: $transition--normal;
+
+    width: 100%;
+    height: 4.125rem;
+    padding-left: 1.625rem;
+
+    border-width: 0.0625rem;
+    border-style: solid;
+    border-color: rgba(40, 42, 71, 0.15);
+    background: transparent;
+
+    font-size: 1rem;
+    color: rgb(40, 42, 71);
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        height: 79px;
+        padding-left: 34px;
+    }
+    &:focus {
+        border-color: rgba(40, 42, 71, 1);
+    }
+    &--white {
+        border-color: rgba(255, 255, 255, 0.25);
+        color: white;
+        &:focus {
+            border-color: rgba(255, 255, 255, 1);
+        }
+    }
+    &-wrap {
+        &.has-error {
+            #{$self} {
+                border-color: $danger !important;
+                box-shadow: 0px 0px 0.5rem 0.1875rem rgba($danger, 0.19);
+                color: $danger;
+            }
+        }
+        // &.has-success {
+        //     #{$self} {
+        //         border-color: $success !important;
+        //         box-shadow: 0px 0px 0.5rem 0.1875rem rgba($success, 0.19);
+        //         color: $success;
+        //     }
+        // }
+    }
+}

@@ -1,0 +1,28 @@
+mixin capture-form()
+	form.capture-form&attributes(attributes)
+		p.capture-form__title Выберите удобный способ связи:
+		.capture-form__options 
+			label(data-type='email')
+				input(type="radio" name='Тип связи' value="email" checked)
+				.target
+					+icon('social-mail')
+					p E-mail
+			label(data-type='tel')
+				input(type="radio" name='Тип связи' value="WhatsApp") 
+				.target
+					+icon('social-wa')
+					p WhatsApp
+			label(data-type='tel')
+				input(type="radio" name='Тип связи' value="Telegram")
+				.target
+					+icon('social-tg')
+					p Telegram
+			label(data-type='tel')
+				input(type="radio" name='Тип связи' value="Viber")
+				.target
+					+icon('social-viber')
+					p Viber
+		.d-lg-flex
+			.capture-form__input-wrap.input-wrap 
+				input.capture-form__input.input.input--white(type='email')
+			button.capture-form__btn.uk-button.btn-solid-primary(type='submit') Получить консультацию

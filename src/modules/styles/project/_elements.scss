@@ -1,0 +1,56 @@
+@import "./elements/buttons";
+@import "./elements/input";
+@import "./elements/slider";
+.container {
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        padding: 0;
+    }
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 1.6875rem;
+    line-height: 1.3em;
+    strong {
+        font-weight: bold;
+    }
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        font-size: 3.125rem;
+    }
+}
+
+.appnav {
+    font-weight: 500;
+    font-size: 0.625rem;
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        font-size: 1.0625rem;
+    }
+    a {
+        transition: $transition--hover;
+        &:last-child {
+            pointer-events: none;
+
+        }
+    }
+    &--light {
+        color: #FFFFFF;
+        a {
+            &:hover {
+                color: link-hover($secondary);
+            }
+            &:last-child {
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+    &--dark {
+        a {
+            &:hover {
+                color: link-hover(rgb(40, 42, 71))
+            }
+            &:last-child {
+                color: rgba(40, 42, 71, 0.4);
+            }
+        }
+    }
+}

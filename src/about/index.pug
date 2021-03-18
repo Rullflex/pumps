@@ -1,0 +1,80 @@
+extends ../modules/layout/_layout
+
+prepend head
+	title О нас
+	meta(name="description", content="О нас")
+
+block header
+	+header(2)
+block footer
+	+footer(2)
+block content
+	main.main
+		section.hero 
+			.hero__ibg.ibg
+				+picture-min(jpg, `${assets}hero-bg`, `${assets}hero-bg`, `sl`)
+			.container
+				+appnav('О нас').appnav--light
+				h1.hero__title О компании #[strong РЕМГВАРДИЯ]
+				p.hero__descr Мы занимаемся ремонтом насосов, электродвигателей и обслуживание КНС с 1995 года.
+				ul.hero__advan 
+					li.hero__advan-item.hero__advan-item--1
+						+icon('thumb-up', 'white')
+						p Ремонтируем#[br] электродвигатели#[br] с 1995 года
+					li.hero__advan-item.hero__advan-item--2
+						+icon('shield-done', 'white')
+						p Гарантия по договору
+					li.hero__advan-item.hero__advan-item--3
+						+icon('setting', 'white')
+						p Сроки ремонта от 1 дня
+		
+		//- section DIRECTOR
+		+director().s2
+		//- end DIRECTOR
+
+		section.s3 
+			.container 
+				h2.s3__title #[strong История] нашей компании
+				.s3__widget
+					.s3__tab
+						ul.s3__slide-tab.uk-slider-items
+							- for(var i = 1; i <= 5; i++)
+								li 
+									a.s3__tab-item 1995-2000
+					.s3__slide 
+						ul.s3__slide-items.uk-switcher
+							- for(var i = 1; i <= 5; i++)
+								li.s3__slide-content 
+									p.s3__slide-title Период 1995-2000 года
+									.s3__slide-text 
+										p За 15 лет работы мы сталкивались с абсолютно разным оборудованием, даже на первый взгляд не пригодным для ремонта. Только благодаря колоссальному опыту наших мастеров нам удается его привести в полностью рабочее состояние, за что мы часто получаем благодарности.
+										p Я убежден, что сервис и качество работ напрямую зависят от руководителя компании, поэтому я всегда открыт к обратной связи и вашим предложениям.
+									a.s3__slide-btn.uk-button.btn-solid-primary Следующий период
+
+		section.s4 	
+			.container 
+				h2.s4__title #[strong Фотографии] c&nbsp;производства
+				.s4__slider(data-uk-slider)
+					+slider-nav().s4__slider-nav
+					.s4__slider-container.uk-slider-container 
+						ul.uk-slider-items 
+							li.s4__slider-item
+								.s4__slider-ibg.ibg 
+									+picture(jpg, `${assets}s4-i1`, 'sl', '')
+							li.s4__slider-item
+								.s4__slider-ibg.ibg 
+									+picture(jpg, `${assets}s4-i1`, 'sl', '')
+							li.s4__slider-item
+								.s4__slider-ibg.ibg 
+									+picture(jpg, `${assets}s4-i1`, 'sl', '')
+							li.s4__slider-item
+								.s4__slider-ibg.ibg 
+									+picture(jpg, `${assets}s4-i1`, 'sl', '')
+								
+		//- section CONTACTS
+		+contacts()
+		//- end CONTACTS
+
+		//- section CAPTURE
+		+capture()
+		//- end CAPTURE

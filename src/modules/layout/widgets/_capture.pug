@@ -1,0 +1,7 @@
+mixin capture()
+    section.capture&attributes(attributes)
+        .container
+            .capture__head
+                h2.capture__title Остались #[strong вопросы?]
+                p.capture__descr Оставьте ваш телефон. Мы свяжемся с вами и ответим вам на все вопросы
+            +capture-form().capture__form

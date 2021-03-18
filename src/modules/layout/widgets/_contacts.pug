@@ -1,0 +1,37 @@
+mixin contacts()
+	section.contacts&attributes(attributes)
+		.container
+			h2.contacts__title #[strong Контакты]
+			.contacts__widget
+				ul.contacts__info 
+					li 
+						.contacts__info-icon 
+							+icon('phone-outline', 'white')
+						a.contacts__info-phone(href=phoneLink)= phoneNumber
+					li 
+						.contacts__info-icon 
+							+icon('mail-outline', 'white')
+						a.contacts__info-mail.link(href=`mailto:${mailAdress}`)= mailAdress
+					li 
+						.contacts__info-icon 
+							+icon('pin-outline', 'white')
+						p.contacts__info-adress г. Москва,#[br.d-lg-none] 3-й Угрешский проезд, 15
+				.contacts__icons
+					p Свяжитесь с нами:
+					.contacts__icons-set    
+						a(href=waLink)
+							+icon(`social-wa`)
+						a(href=viberLink)
+							+icon(`social-viber`)
+						a(href=tgLink)
+							+icon(`social-tg`)
+				.contacts__frame
+				.contacts__widget-map.ibg 
+					+picture(jpg, `${modules}contacts-map`, 'n')
+				.contacts__scheme-text Схема удобного проезда
+			.contacts__map
+				.contacts__map-downloading
+					.loadingio-spinner-rolling-hz3sd853mcv
+						.ldio-ekx347c8429
+							div
+				.contacts__map-script

@@ -1,0 +1,23 @@
+mixin director()
+    section.director&attributes(attributes)
+        .container
+            .director__line.director__line--1
+            .director__line.director__line--2 
+            h2.director__title #[strong Качество ремонтных услуг] - на первом месте
+            .director__mancard 
+                .director__man.ibg 
+                    +picture(jpg, `${modules}director-man`, 'sl', 'l')
+                p.director__mancard-name Иванов Иван Иванович
+                p.director__mancard-pos Директор компании
+            .director__descr 
+                .director__descr-text 
+                    p Здравствуйте! Меня зовут Иванов Иван и я представляю компанию РЕМГВАРДИЯ. 
+
+                    p За 15 лет работы мы сталкивались с абсолютно разным оборудованием, даже на первый взгляд не пригодным#[br] для ремонта. #[a.director__link-moretext.link.d-lg-none(href="#" style="font-weight: 600") Показать полность...] #[span.sm-hid Только благодаря колоссальному опыту наших мастеров нам удается его привести в полностью рабочее состояние, за что мы часто получаем благодарности.]
+                    .sm-hid
+                        p Я убежден, что сервис и качество работ напрямую зависят от&nbsp;руководителя компании, поэтому я всегда открыт к&nbsp;обратной связи и вашим предложениям. 
+
+                        p Можете писать на почту и я лично отвечу в течение 24 часов. 
+                .director__descr-email 
+                    strong E-mail: 
+                    a.link(href=`mailto:${mailAdress}`)= mailAdress

@@ -1,0 +1,102 @@
+.questions {
+    padding-top: 4.5rem;
+    padding-bottom: 5.25rem;
+    background: #FAFAFA;
+    &__title {
+        margin-bottom: 3.1rem;
+        line-height: 1.2em;
+    }
+    &__blocks {}
+    &__block {
+        position: relative;
+        &-head {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+            &::before {
+                content: '';
+                display: block;
+                width: 3.1875rem;
+                height: 0.25rem;
+                background: #FFDB5C;
+                margin-right: 1.5625rem;
+            }
+        }
+        &-descr {
+            font-size: 0.875rem;
+            width: 19.0625rem;
+        }
+        &--1 {
+            margin-bottom: 3.3rem;
+        }
+        &--2 {
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .questions {
+        padding-top: 8.5625rem;
+        padding-bottom: 8.375rem;
+
+        &__line {
+            background: rgba($color: #2E2E2E, $alpha: 0.1);
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            top: 0;
+            &--1 {
+                left: -244px;
+            }
+            &--2 {
+                right: -244px;
+            }
+        }
+        &__title {
+            margin-bottom: 5.6875rem;
+        }
+        &__blocks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__block {
+            width: 558px;
+            height: 276px;
+            padding-left: 3.25rem;
+            padding-right: 3.25rem;
+            background: #FFFFFF;
+            box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.04);
+            font-size: 22px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 558px;
+                height: 0.5rem;
+                background: $secondary;
+                @include center-item-x('relative');
+            }
+            &-descr {
+                width: 26.8125rem;
+                font-size: 16px;
+            }
+            &-head {
+                height: 100px;
+                font-size: 1.375rem;
+                margin-bottom: 2.125rem;
+                border-bottom: 1px solid rgba(#212121, 0.15);
+                &::before {
+                    margin-right: 1.75rem;
+                    width: 3.6875rem;
+                }
+            }
+            &--1 {
+                margin-bottom: 0;
+            }
+            &--2 {
+            }
+        }
+    }
+}

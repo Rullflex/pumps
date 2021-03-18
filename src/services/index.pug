@@ -1,0 +1,21 @@
+extends ../modules/layout/_layout
+
+prepend head
+	title Services
+	meta(name="description", content="Services")
+
+block header
+	+header(3)
+block footer
+	+footer(3)
+block content
+	main.main
+		.container
+			+appnav('Услуги').appnav--dark
+		//- section SERVICES
+		+services().s1
+		//- end SERVICES
+		
+		//- section CAPTURE
+		+capture()
+		//- end CAPTURE

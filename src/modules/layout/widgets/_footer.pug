@@ -1,0 +1,45 @@
+mixin footer(navCurrent = 0)
+	footer.footer
+		.container 
+			a.footer__logo(href="/")
+				img(src=`${modules}logo.svg` alt=companyName)
+			.footer__contacts
+				a.footer__btn.uk-button.btn-outline-primary.d-none.d-lg-flex(href="#callback" data-uk-toggle) Обратный звонок
+				a.footer__tel(href=phoneLink)= phoneNumber
+				p.footer__freecalltxt.d-none.d-lg-block Бесплатный звонок по России
+				ul.footer__social 
+					a(href=waLink)
+						+icon(`social-wa`)
+					a(href=viberLink)
+						+icon(`social-viber`)
+					a(href=tgLink)
+						+icon(`social-tg`)
+				.footer__mail 
+					+icon(`social-mail`)
+					a.link(href=`mailto:${mailAdress}`)= mailAdress
+				.footer__gap 
+					span Мы на связи с 9:00 до 21:00
+			ul.footer__nav 
+				li 
+					a(href=aboutPageLink class=`${navCurrent == 2 ? `active` : ``}`) О компании
+				li 
+					a(href=repaircostPageLink class=`${navCurrent == 4 ? `active` : ``}`) Стоимость ремонта
+				li 
+					a(href=howweworkPageLink class=`${navCurrent == 5 ? `active` : ``}`) Как мы работаем
+				li 
+					a(href=contactsPageLink class=`${navCurrent == 6 ? `active` : ``}`) Контакты
+				li 
+					a(href=servicesPageLink class=`${navCurrent == 3 ? `active` : ``}`) Услуги
+					.set 
+						a.link(href='#') Ремонт электродвигателей
+						a.link(href='#') Ремонт насосного оборудования
+						a.link(href=znoPageLink) Замена насосного оборудования
+						a.link(href='#') Ремонт и обслуживание очистных#[br] сооружений ЛОС, БЛОС
+						a.link(href='#') Обслуживание КНС
+						a.link(href='#') Ремонт компрессоров
+						a.link(href='#') Ремонт генераторов
+						a.link(href='#') Ремонт тельферов
+			.footer__cred 
+				p.footer__rights © 2019 Компания «РЕМГВАРДИЯ»#[br] Все права защищены.
+				a.footer__policy(href=policyLink) Политика конфиденцияльности
+				a.footer__license(href=licenseLink) Лицензии

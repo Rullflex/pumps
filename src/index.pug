@@ -1,0 +1,120 @@
+extends modules/layout/_layout
+
+prepend head
+	title Main
+	meta(name="description", content="Описание страницы")
+
+block header
+	+header(1)
+block footer
+	+footer(1)
+block content
+	main.main
+		section.hero 
+			.hero__ibg.ibg
+				+picture-min(jpg, `${assets}hero-bg`, `${assets}hero-bg`, `sl`)
+			.container
+				h1.hero__title #[strong Ремонт насосов,#[br] электродвигателей]#[br] и обслуживание КНС#[br] в Москве и#[br.d-lg-none] Подмосковье
+				p.hero__descr Оставляйте заявку, опишите свою ситуацию и мы рассчитаем стоимость ремонта
+				a.hero__btn.uk-button.btn-solid-primary Рассчитать стоимость
+				ul.hero__advan 
+					li.hero__advan-item.hero__advan-item--1
+						+icon('thumb-up', 'white')
+						p Ремонтируем#[br] электродвигатели#[br] с 1995 года
+					li.hero__advan-item.hero__advan-item--2
+						+icon('shield-done', 'white')
+						p Гарантия по договору
+					li.hero__advan-item.hero__advan-item--3
+						+icon('setting', 'white')
+						p Сроки ремонта от 1 дня
+		//- section SERVICES
+		+services()
+		//- end SERVICES
+		
+		section.s3 
+			.container 
+				h2.s3__title #[strong Коммерческое] предложение
+				p.s3__subtitle Оставьте телефон или E-mail. Мы свяжемся с&nbsp;вами, уточним детали и отправим коммерческое предложение по ремонту вашего оборудования
+				+picture(png, `${assets}s3-book`, 'sl', 'l').s3__img-book
+				+capture-form()
+
+		//- section DIRECTOR
+		+director()
+		//- end DIRECTOR
+
+		section.s5 
+			.container 
+				.s5__line.s5__line--1
+				.s5__line.s5__line--2 
+				h2.s5__title #[strong Имеем собственный ремонтный цех]#[br] с удобным расположением
+				p.s5__descr На ТТК, Южнопортовый район. Удобный подъезд для разгрузки грузового транспорта, для легковых автомобилей есть места для парковки.
+				.s5__slider(data-uk-slider="finite: true;")
+					+slider-nav().s5__slider-nav
+					.s5__slider-container.uk-slider-container 
+						ul.uk-slider-items 
+							li.s5__slider-item
+								.s5__slider-ibg.ibg 
+									+picture(jpg, `${assets}s5-i1`, 'n', '')
+							li.s5__slider-item
+								.s5__slider-ibg.ibg 
+									+picture(jpg, `${assets}s5-i2`, 'n', '')
+							li.s5__slider-item
+								.s5__slider-ibg.ibg 
+									+picture(jpg, `${assets}s5-i1`, 'n', '')
+							li.s5__slider-item
+								.s5__slider-ibg.ibg 
+									+picture(jpg, `${assets}s5-i2`, 'n', '')
+				a.s5__btn.uk-button.btn-solid-primary Подробнее о нашей компании
+		section.s6 
+			.container 
+				.s6__line.s6__line--1
+				.s6__line.s6__line--2
+				h2.s6__title С нами удобно #[strong работать] 
+				.s6__blocks 
+					.s6__block.s6__block--1
+						img.s6__block-icon.lazyload(src=`${assetsIco}car-service.png` alt="")
+						p.s6__block-descr Производим выездные#[br] аварийно-восстановительные работы
+					.s6__block.s6__block--2
+						img.s6__block-icon.lazyload(src=`${assetsIco}payment.png` alt="")
+						p.s6__block-descr Работаем по безналичному#[br] расчёту с НДС и без НДС
+		section.s7 
+			.container 
+				.s7__line
+				h2.s7__title #[strong Благодарственные] письма
+				.s7__slider(data-uk-slider="finite: true;")
+					+slider-nav().s7__slider-nav
+					.s7__slider-container.uk-slider-container 
+						ul.uk-slider-items 
+							li.s7__slider-item
+								.s7__slider-ibg.ibg 
+									+picture(jpg, `${assets}s7-i1`, 'n', '')
+							li.s7__slider-item
+								.s7__slider-ibg.ibg 
+									+picture(jpg, `${assets}s7-i2`, 'n', '')
+							li.s7__slider-item
+								.s7__slider-ibg.ibg 
+									+picture(jpg, `${assets}s7-i3`, 'n', '')
+							li.s7__slider-item
+								.s7__slider-ibg.ibg 
+									+picture(jpg, `${assets}s7-i4`, 'n', '')
+							li.s7__slider-item
+								.s7__slider-ibg.ibg 
+									+picture(jpg, `${assets}s7-i1`, 'n', '')
+							li.s7__slider-item
+								.s7__slider-ibg.ibg 
+									+picture(jpg, `${assets}s7-i2`, 'n', '')
+							li.s7__slider-item
+								.s7__slider-ibg.ibg 
+									+picture(jpg, `${assets}s7-i3`, 'n', '')
+							li.s7__slider-item
+								.s7__slider-ibg.ibg 
+									+picture(jpg, `${assets}s7-i4`, 'n', '')
+		
+		//- section MOST ASK QUESTIONS
+		+questions()
+		//- end MOST ASK QUESTIONS
+		
+		
+		//- section CAPTURE
+		+capture()
+		//- end CAPTURE

@@ -1,0 +1,134 @@
+.director {
+    padding-top: 4.375rem;
+    padding-bottom: 3.4375rem;
+    &__title {
+        width: 16.75rem;
+        line-height: 1.2em;
+        margin-bottom: 4.4rem;
+    }
+    &__man {
+        width: 15.5rem;
+        height: 19.125rem;
+        position: absolute;
+        left: -1.875rem;
+        top: -2.125rem;
+    }
+    &__mancard {
+        padding-top: 18rem;
+        padding-left: 1.875rem;
+        width: 16.1875rem;
+        height: 22.75rem;
+        background: $secondary;
+
+        color: white;
+        line-height: 1.6em;
+
+        position: relative;
+        margin-left: auto;
+        margin-right: 0.6875rem;
+        margin-bottom: 2.1875rem;
+        &-name {
+            font-weight: bold;
+            font-size: 1.125rem;
+            margin-bottom: 0.2rem;
+        }
+        &-pos {
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+    }
+    &__descr {
+        &-text {
+            font-size: 0.875rem;
+            .sm-hid {
+                display: none;
+                &.reveal {
+                    display: inline;
+                }
+            }
+        }
+        &-email {
+            line-height: 3.4375rem;  
+            border-top: 1px solid rgba(#212121, 0.1);
+            border-bottom: 1px solid rgba(#212121, 0.1);
+            margin-top: 2rem;
+            strong {
+                display: inline-block;
+                font-weight: bold;
+                margin-right: 9px;
+            }          
+            a {
+                font-weight: 500;
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .director {
+        padding-top: 158px;
+        padding-bottom: 147px;
+        &__line {
+            background: rgba($color: #2E2E2E, $alpha: 0.1);
+            position: absolute;
+            height: 754px;
+            width: 1px;
+            top: 0;
+            &--1 {
+                left: -244px;
+            }
+            &--2 {
+                right: -244px;
+            }
+        }
+        &__title {
+            text-align: left;
+            width: unset;
+            margin-bottom: 82px;
+        }
+        &__man {
+            width: 377px;
+            height: 483px;
+            left: -45px;
+            top: -53px;
+        }
+        &__mancard {
+            display: inline-block;
+            padding-top: 460px;
+            padding-left: 65px;
+            width: 395px;
+            height: 545px;
+            
+            margin: 60px 101px 0 40px;
+            &-name {
+                font-size: 24px;
+                margin-bottom: 5px;
+            }
+            &-pos {
+                font-size: 16px;
+            }
+        }
+        &__descr {
+            width: 585px;
+            display: inline-block;
+            &-text {
+                font-size: 20px;
+                .sm-hid {
+                    display: inline;
+                    &.reveal {}
+                }
+                p:not(:last-child) {
+                    margin-bottom: 31px;
+                }
+            }
+            &-email {
+                line-height: 96px;  
+                margin-top: 68px;
+                font-size: 24px;
+                strong {
+                }          
+                a {
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+mixin service-kind(title, numberOfItems = 1)
+    section.service-kind&attributes(attributes)
+        .container 
+            h2.service-kind__title!= '<strong>Услуги</strong> ' + title
+            ul.service-kind__list
+                - for(var i = 1; i <= numberOfItems; i++)
+                    li.service-kind__item
+                        .service-kind__item-img.ibg  
+                            +picture(jpg, `${modules}service-kind-placeholder`, 'n')
+                        p.service-kind__item-title Замена глубинного насоса
+                        p.service-kind__item-descr Необходимость замены агрегата возникает зачастую из-за того, что был неправильно выполнен монтаж скважинного насоса. 
+                        a.service-kind__item-btn.uk-button.btn-solid-primary Перейти

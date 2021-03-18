@@ -1,0 +1,38 @@
+.capture {
+    padding-top: 3.6875rem;
+    padding-bottom: 4.625rem;
+    background: $secondary;
+    &__title {
+        margin-bottom: 1.4375rem;
+        color: white;
+    }
+    &__descr {
+        width: 16.375rem;
+        color: white;
+        font-size: 0.875rem;
+        margin-bottom: 1.5625rem;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .capture {
+        padding-top: 6.5625rem;
+        padding-bottom: 6.5625rem;
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__head {
+            margin-top: 1rem;
+        }
+        &__title {
+            margin-bottom: 2.125rem;
+        }
+        &__descr {
+            width: 26.6875rem;
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        &__form {
+        }
+    }
+}

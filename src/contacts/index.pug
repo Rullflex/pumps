@@ -1,0 +1,21 @@
+extends ../modules/layout/_layout
+
+prepend head
+	title Контакты
+	meta(name="description", content="Контакты")
+
+block header
+	+header(6)
+block footer
+	+footer(6)
+block content
+	main.main
+		.container
+			+appnav('Контакты').appnav--dark
+		//- section CONTACTS
+		+contacts()
+		//- end CONTACTS
+
+		//- section CAPTURE
+		+capture()
+		//- end CAPTURE

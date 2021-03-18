@@ -1,0 +1,343 @@
+.hero {
+    padding-top: 3.1875rem;
+    padding-bottom: 13.125rem;
+    height: unset;
+    &__ibg {}
+    &__title {
+        margin-bottom: 2.0625rem;
+
+    }
+    &__descr {
+        font-weight: 500;
+        margin-bottom: 2.0625rem;
+    }
+    &__btn {}
+    &__advan { }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .hero {
+        padding-top: 5.25rem;
+        padding-bottom: 6.125rem;
+        height: unset;
+        &__ibg {}
+        &__title {
+            margin-bottom: 2.1875rem;
+            strong {}
+        }
+        &__descr {
+            width: 428px;  
+            font-size: 1.25rem;
+            margin-bottom: 2.75rem;
+        }
+        &__btn {}
+        &__advan {}
+    }
+}
+
+.s3 {
+    padding-top: 4.375rem;
+    padding-bottom: 5.625rem;
+    background: $secondary;
+    &__img {
+        &-book {
+            pointer-events: none;
+            position: absolute;
+            left: -12.125rem;
+            top: -1.2625rem;
+            width: 48.8125rem;
+        }
+    }
+    &__title {
+        color: white;
+        margin-bottom: 1.625rem;
+    }
+    &__subtitle {
+        font-size: 0.875rem;
+        line-height: 1.6em;
+        color: white;
+        margin-bottom: 17rem;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s3 {
+        padding-top: 109px;
+        padding-bottom: 109px;
+        background: $secondary;
+        &__img {
+            &-book {
+                left: 240px;
+                top: -517px;
+                width: 1833px;
+            }
+        }
+        &__title {
+            text-align: left;
+            margin-bottom: 2.125rem;
+        }
+        &__subtitle {
+            width: 715px;
+            font-size: 20px;
+            margin-bottom: 47px;
+        }
+    }
+}
+
+.s5 {
+    padding-top: 3.75rem;
+    padding-bottom: 4.8125rem;
+    box-shadow: inset 0px 13.5rem 8.5rem rgba(0, 0, 0, 0.02);
+    &__title {
+        margin-bottom: 1.6875rem;
+    }
+    &__descr {
+        font-size: 0.875rem;
+        margin-bottom: 2.125rem;
+    }
+    &__slider {
+        position: relative;
+        &-nav {
+            display: none;
+        }
+        &-container {
+            overflow: visible;
+        }
+        &-item {
+            padding-right: 1.5rem;
+        }
+        &-ibg {
+            width: 17.25rem;
+            height: 11.0625rem;
+        }
+    }
+    &__btn {
+        width: 100%;
+        line-height: 4.9375rem;
+        font-size: 1.0625rem;
+        margin-top: 3.4375rem;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s5 {
+        padding-top: 134px;
+        padding-bottom: 157px;
+        box-shadow: inset 0px 216px 136px rgba(0, 0, 0, 0.02);
+        &__line {
+            background: rgba($color: #2E2E2E, $alpha: 0.1);
+            position: absolute;
+            &--1 {
+                height: 845px;
+                width: 1px;
+                top: 0;
+                left: -244px;
+            }
+            &--2 {
+                width: 595px;
+                height: 1px;
+                bottom: 57px;
+                right: 0;
+            }
+        }
+        &__title {
+            margin-bottom: 47px;
+        }
+        &__descr {
+            width: 709px;
+            font-size: 20px;
+            margin-bottom: 69px;
+        }
+        &__slider {
+            &-nav {
+                display: flex;
+                position: absolute;
+                right: 0;
+                top: -133px;
+            }
+            &-container {}
+            &-item {
+                padding-right: 20px;
+            }
+            &-ibg {
+                width: 674px;
+                height: 361px;
+            }
+        }
+        &__btn {
+            width: 476px;
+            line-height: 114px;
+            font-size: 21px;
+            margin-top: 69px;
+        }
+    }
+}
+.s6 {
+    padding-top: 3.75rem;
+    padding-bottom: 5.1875rem;
+    background: #FAFAFA;
+    .container {
+        padding-left: calc(20px + 0.7rem);
+    }
+    &__title {
+        margin-bottom: 3.625rem;
+    }
+    &__blocks {}
+    &__block {
+        padding-left: 5.1875rem;
+        font-weight: bold;
+        font-size: 0.875rem;
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 3.2125rem;
+        }
+        &-icon {
+            left: 0;
+            @include center-item-y();
+        }
+        &--1 {
+            .s6__block-icon {
+                width: 3.8125rem;
+            }
+        }
+        &--2 {
+            .s6__block-icon {
+                width: 3.375rem;
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s6 {
+        padding-top: 7.4375rem;
+        padding-bottom: 8.25rem;
+        .container {
+            padding-left: 0;
+        }
+        &__line {
+            background: rgba($color: #2E2E2E, $alpha: 0.1);
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            top: 0;
+            &--1 {
+                left: -244px;
+            }
+            &--2 {
+                right: -244px;
+            }
+        }
+        &__title {
+            margin-bottom: 4.6875rem;
+            text-align: center;
+        }
+        &__blocks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__block {
+            width: 541px;
+            height: 323px;
+            padding-left: 3.25rem;
+            background: #FFFFFF;
+            box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.04);
+            font-size: 22px;
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 0.5rem;
+                background: $secondary;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            &-descr {
+                position: absolute;
+                left: 3.25rem;
+                bottom: 3.0625rem;
+            }
+            &-icon {
+                @include center-item-undo(2.75rem, 3.25rem);
+            }
+            &--1 {
+                .s6__block-icon {
+                    width: unset;
+                }
+            }
+            &--2 {
+                .s6__block-icon {
+                    width: unset;
+                }
+            }
+        }
+    }
+}
+.s7 {
+    padding-top: 4.5625rem;
+    padding-bottom: 5.375rem;
+    &__title {
+        margin-bottom: 3.625rem;
+    }
+    &__slider {
+        position: relative;
+        &-nav {
+            display: none;
+        }
+        &-container {
+            overflow: visible;
+        }
+        &-item {
+            padding-right: 1.4375rem;
+        }
+        &-ibg {
+            width: 13.5rem;
+            height: 19.1875rem;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s7 {
+        padding-top: 114px;
+        padding-bottom: 155px;
+        &__line {
+            background: rgba($color: #2E2E2E, $alpha: 0.1);
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            top: 0;
+            left: -244px;
+        }
+        &__title {
+            margin-bottom: 82px;
+        }
+        &__slider {
+            &-nav {
+                display: flex;
+                position: absolute;
+                right: 0;
+                top: -145px;
+            }
+            &-container {}
+            &-item {
+                padding-right: 44px;
+            }
+            &-ibg {
+                width: 337px;
+                height: 479px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+
+}

@@ -1,0 +1,12 @@
+.hero {
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+    }
+    &__title {
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+        }
+    }
+    &__descr {
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+        }
+    }
+}
