@@ -1,0 +1,75 @@
+extends modules/layout/_layout
+
+prepend head
+	title Как мы работаем
+	meta(name="description", content="Как мы работаем")
+
+block header
+	+header(5)
+block footer
+	+footer(5)
+block content
+	main.main
+		section.s09 
+			.container
+				+appnav('Как мы работаем').appnav--dark
+				.s09__line.s09__line--1
+				.s09__line.s09__line--2 
+				.s09__line.s09__line--3
+				h2.s09__title Как мы #[strong работаем?]
+				.s09__blocks 
+					.s09__block 
+						.s09__block-head 
+							.s09__block-num 1
+							.s09__block-title Заявка
+						.s09__block-descr Вы оставляете заявку на сайте
+						a.s09__block-btn.uk-button.btn-solid-primary.d-none.d-lg-flex Оставить заявку
+					.s09__block 
+						.s09__block-head 
+							.s09__block-num 2
+							.s09__block-title Консультация
+						.s09__block-descr С вами связывается наш менеджер, узнаёт всю необходимую информацию и проводит консультацию по&nbsp;выбранной услуге.
+					.s09__block 
+						.s09__block-head 
+							.s09__block-num 3
+							.s09__block-title Приёмка оборудования
+						.s09__block-descr Вы привозите оборудование к&nbsp;нам в цех. Либо мы лично выезжаем к&nbsp;вам на объект.
+					.s09__block 
+						.s09__block-head 
+							.s09__block-num 4
+							.s09__block-title Диагностика и договор
+						.s09__block-descr Проводим диагностику вашего оборудования. Озвучиваем стоимость работ и заключаем договор.
+					.s09__block 
+						.s09__block-head 
+							.s09__block-num 5
+							.s09__block-title Оплата
+						.s09__block-descr Вы оплачиваете полную стоимость работ удобным для вас способом.
+					.s09__block 
+						.s09__block-head 
+							.s09__block-num 6
+							.s09__block-title Ремонт
+						.s09__block-descr После оплаты мы проводим качественный ремонт вашего оборудования.
+		section.s10 
+			.container 
+				h2.s10__title Виды #[strong оплат]
+				ul.s10__list
+					li.s10__item 
+						.s10__item-icon
+							+icon('shield-done') 
+						p Безналичный расчёт с НДС
+					li.s10__item 
+						.s10__item-icon
+							+icon('work') 
+						p Безналичный расчёт без НДС
+					li.s10__item 
+						.s10__item-icon
+							+icon('wallet') 
+						p Расчёт за наличные
+
+		//- section MOST ASK QUESTIONS
+		+questions().s11
+		//- end MOST ASK QUESTIONS
+
+		//- section CAPTURE
+		+capture()
+		//- end CAPTURE

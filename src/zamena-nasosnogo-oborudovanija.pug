@@ -1,4 +1,4 @@
-extends ../modules/layout/_layout
+extends modules/layout/_layout
 
 prepend head
 	title Замена насосного оборудования
@@ -10,9 +10,9 @@ block footer
 	+footer(0)
 block content
 	main.main
-		section.hero 
+		section.hero.hero-zamena-nasosnogo-oborudovanija
 			.hero__ibg.ibg
-				+picture-min(jpg, `${assets}hero-bg`, `${assets}hero-bg`, `sl`)
+				+picture-min(jpg, `${assets}hero-zamena-nasosnogo-oborudovanija-bg`, `${assets}hero-zamena-nasosnogo-oborudovanija-bg`, `sl`)
 			.container
 				+appnav('Услуги', 'Замена насосного оборудования').appnav--light
 				h1.hero__title Замена #[strong насосного оборудования]

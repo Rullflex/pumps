@@ -1,7 +1,8 @@
-$relative-link-to-modules: "../../modules/fonts";
+$relative-link-to-modules: "../fonts";
 
 @include font-face("Gilroy", "Gilroy-Light", "300", "normal", $relative-link-to-modules);
 @include font-face("Gilroy", "Gilroy-Regular", "400", "normal", $relative-link-to-modules);
 @include font-face("Gilroy", "Gilroy-Medium", "500", "normal", $relative-link-to-modules);
 @include font-face("Gilroy", "Gilroy-SemiBold", "600", "normal", $relative-link-to-modules);
 @include font-face("Gilroy", "Gilroy-Bold", "700", "normal", $relative-link-to-modules);
+@include font-face("Gilroy", "Gilroy-Heavy", "900", "normal", $relative-link-to-modules);

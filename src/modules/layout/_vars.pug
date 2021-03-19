@@ -1,3 +1,5 @@
+//- mode - development / production
+//- - var mode = 'production'
 //- Links 
 
 - var phoneLink = "tel:89680423151"
@@ -6,13 +8,13 @@
 - var policyLink = "/privacy-policy.pdf"
 - var licenseLink = "/license.pdf"
 
-- var aboutPageLink = '/about'
-- var servicesPageLink = '/services'
-- var repaircostPageLink = '/repair-cost'
-- var howweworkPageLink = '/how-we-work'
-- var contactsPageLink = '/contacts'
+- var aboutPageLink = '/o-nas.html'
+- var servicesPageLink = '/uslugi.html'
+- var repaircostPageLink = '/stoimost-remonta.html'
+- var howweworkPageLink = '/kak-my-rabotaem.html'
+- var contactsPageLink = '/kontakty.html'
 
-- var znoPageLink = '/zamena-nasosnogo-oborudovaniya'
+- var znoPageLink = '/zamena-nasosnogo-oborudovanija.html'
 
 //- social
 - var vkLink = "#"
@@ -25,10 +27,13 @@
 //- image placeholder
 - var ipl = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
 //- image paths
-- var assets = "./assets/images/"
-- var modules = `/modules/images/`
-- var assetsIco = "./assets/images/icons/"
-- var modulesIco = `/modules/images/icons/`
+- var assets = "/assets/images/"
+- var modules = `/assets/images/`
+- var assetsIco = "/assets/images/icons/"
+- var modulesIco = `/assets/images/icons/`
+//- file paths
+- var stylesPath = `/assets/styles/main.min.css`
+- var scriptsPath = `/assets/scripts/main.min.js`
 
 //- grid breakpoints
 - var sm = 420
@@ -39,6 +44,20 @@
 - var primary = '#FFDB5C'
 - var secondary = '#3085EA'
 
-//- iconset
+//-
+//- WP PRODUCTION
+//-
+- var template_directory_uri = `<?php echo get_template_directory_uri(); ?>`
+
+if mode == 'production'
+    - var aboutPageLink = '/o-nas'
+    - var servicesPageLink = '/uslugi'
+
+    - var assets = `${template_directory_uri}/assets/images/`
+    - var modules = `${template_directory_uri}/assets/images/`
+    - var assetsIco = `${template_directory_uri}/assets/images/icons/`
+    - var modulesIco = `${template_directory_uri}/assets/images/icons/`
+    - var stylesPath = `${template_directory_uri}/assets/styles/main.min.css`
+    - var scriptsPath = `${template_directory_uri}/assets/scripts/main.min.js`
 
 

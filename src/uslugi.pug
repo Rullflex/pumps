@@ -1,4 +1,4 @@
-extends ../modules/layout/_layout
+extends modules/layout/_layout
 
 prepend head
 	title Services
@@ -11,9 +11,9 @@ block footer
 block content
 	main.main
 		.container
-			+appnav('Услуги').appnav--dark
+			+appnav('Услуги').appnav--dark.appnav-uslugi
 		//- section SERVICES
-		+services().s1
+		+services().s05
 		//- end SERVICES
 		
 		//- section CAPTURE

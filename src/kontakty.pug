@@ -1,4 +1,4 @@
-extends ../modules/layout/_layout
+extends modules/layout/_layout
 
 prepend head
 	title Контакты
@@ -11,7 +11,7 @@ block footer
 block content
 	main.main
 		.container
-			+appnav('Контакты').appnav--dark
+			+appnav('Контакты').appnav--dark.appnav-kontakty
 		//- section CONTACTS
 		+contacts()
 		//- end CONTACTS

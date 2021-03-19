@@ -10,9 +10,9 @@ block footer
 	+footer(1)
 block content
 	main.main
-		section.hero 
+		section.hero.hero-01
 			.hero__ibg.ibg
-				+picture-min(jpg, `${assets}hero-bg`, `${assets}hero-bg`, `sl`)
+				+picture-min(jpg, `${assets}hero-01-bg`, `${assets}hero-01-bg`, `sl`)
 			.container
 				h1.hero__title #[strong Ремонт насосов,#[br] электродвигателей]#[br] и обслуживание КНС#[br] в Москве и#[br.d-lg-none] Подмосковье
 				p.hero__descr Оставляйте заявку, опишите свою ситуацию и мы рассчитаем стоимость ремонта
@@ -31,84 +31,84 @@ block content
 		+services()
 		//- end SERVICES
 		
-		section.s3 
+		section.s01 
 			.container 
-				h2.s3__title #[strong Коммерческое] предложение
-				p.s3__subtitle Оставьте телефон или E-mail. Мы свяжемся с&nbsp;вами, уточним детали и отправим коммерческое предложение по ремонту вашего оборудования
-				+picture(png, `${assets}s3-book`, 'sl', 'l').s3__img-book
+				h2.s01__title #[strong Коммерческое] предложение
+				p.s01__subtitle Оставьте телефон или E-mail. Мы свяжемся с&nbsp;вами, уточним детали и отправим коммерческое предложение по ремонту вашего оборудования
+				+picture(png, `${assets}s01-book`, 'sl', 'l').s01__img-book
 				+capture-form()
 
 		//- section DIRECTOR
 		+director()
 		//- end DIRECTOR
 
-		section.s5 
+		section.s02 
 			.container 
-				.s5__line.s5__line--1
-				.s5__line.s5__line--2 
-				h2.s5__title #[strong Имеем собственный ремонтный цех]#[br] с удобным расположением
-				p.s5__descr На ТТК, Южнопортовый район. Удобный подъезд для разгрузки грузового транспорта, для легковых автомобилей есть места для парковки.
-				.s5__slider(data-uk-slider="finite: true;")
-					+slider-nav().s5__slider-nav
-					.s5__slider-container.uk-slider-container 
+				.s02__line.s02__line--1
+				.s02__line.s02__line--2 
+				h2.s02__title #[strong Имеем собственный ремонтный цех]#[br] с удобным расположением
+				p.s02__descr На ТТК, Южнопортовый район. Удобный подъезд для разгрузки грузового транспорта, для легковых автомобилей есть места для парковки.
+				.s02__slider(data-uk-slider="finite: true;")
+					+slider-nav().s02__slider-nav
+					.s02__slider-container.uk-slider-container 
 						ul.uk-slider-items 
-							li.s5__slider-item
-								.s5__slider-ibg.ibg 
-									+picture(jpg, `${assets}s5-i1`, 'n', '')
-							li.s5__slider-item
-								.s5__slider-ibg.ibg 
-									+picture(jpg, `${assets}s5-i2`, 'n', '')
-							li.s5__slider-item
-								.s5__slider-ibg.ibg 
-									+picture(jpg, `${assets}s5-i1`, 'n', '')
-							li.s5__slider-item
-								.s5__slider-ibg.ibg 
-									+picture(jpg, `${assets}s5-i2`, 'n', '')
-				a.s5__btn.uk-button.btn-solid-primary Подробнее о нашей компании
-		section.s6 
+							li.s02__slider-item
+								.s02__slider-ibg.ibg 
+									+picture(jpg, `${assets}s02-i1`, 'n', '')
+							li.s02__slider-item
+								.s02__slider-ibg.ibg 
+									+picture(jpg, `${assets}s02-i2`, 'n', '')
+							li.s02__slider-item
+								.s02__slider-ibg.ibg 
+									+picture(jpg, `${assets}s02-i1`, 'n', '')
+							li.s02__slider-item
+								.s02__slider-ibg.ibg 
+									+picture(jpg, `${assets}s02-i2`, 'n', '')
+				a.s02__btn.uk-button.btn-solid-primary Подробнее о нашей компании
+		section.s03 
 			.container 
-				.s6__line.s6__line--1
-				.s6__line.s6__line--2
-				h2.s6__title С нами удобно #[strong работать] 
-				.s6__blocks 
-					.s6__block.s6__block--1
-						img.s6__block-icon.lazyload(src=`${assetsIco}car-service.png` alt="")
-						p.s6__block-descr Производим выездные#[br] аварийно-восстановительные работы
-					.s6__block.s6__block--2
-						img.s6__block-icon.lazyload(src=`${assetsIco}payment.png` alt="")
-						p.s6__block-descr Работаем по безналичному#[br] расчёту с НДС и без НДС
-		section.s7 
+				.s03__line.s03__line--1
+				.s03__line.s03__line--2
+				h2.s03__title С нами удобно #[strong работать] 
+				.s03__blocks 
+					.s03__block.s03__block--1
+						img.s03__block-icon.lazyload(src!=`${assetsIco}car-service.png` alt="")
+						p.s03__block-descr Производим выездные#[br] аварийно-восстановительные работы
+					.s03__block.s03__block--2
+						img.s03__block-icon.lazyload(src!=`${assetsIco}payment.png` alt="")
+						p.s03__block-descr Работаем по безналичному#[br] расчёту с НДС и без НДС
+		section.s04 
 			.container 
-				.s7__line
-				h2.s7__title #[strong Благодарственные] письма
-				.s7__slider(data-uk-slider="finite: true;")
-					+slider-nav().s7__slider-nav
-					.s7__slider-container.uk-slider-container 
+				.s04__line
+				h2.s04__title #[strong Благодарственные] письма
+				.s04__slider(data-uk-slider="finite: true;")
+					+slider-nav().s04__slider-nav
+					.s04__slider-container.uk-slider-container 
 						ul.uk-slider-items 
-							li.s7__slider-item
-								.s7__slider-ibg.ibg 
-									+picture(jpg, `${assets}s7-i1`, 'n', '')
-							li.s7__slider-item
-								.s7__slider-ibg.ibg 
-									+picture(jpg, `${assets}s7-i2`, 'n', '')
-							li.s7__slider-item
-								.s7__slider-ibg.ibg 
-									+picture(jpg, `${assets}s7-i3`, 'n', '')
-							li.s7__slider-item
-								.s7__slider-ibg.ibg 
-									+picture(jpg, `${assets}s7-i4`, 'n', '')
-							li.s7__slider-item
-								.s7__slider-ibg.ibg 
-									+picture(jpg, `${assets}s7-i1`, 'n', '')
-							li.s7__slider-item
-								.s7__slider-ibg.ibg 
-									+picture(jpg, `${assets}s7-i2`, 'n', '')
-							li.s7__slider-item
-								.s7__slider-ibg.ibg 
-									+picture(jpg, `${assets}s7-i3`, 'n', '')
-							li.s7__slider-item
-								.s7__slider-ibg.ibg 
-									+picture(jpg, `${assets}s7-i4`, 'n', '')
+							li.s04__slider-item
+								.s04__slider-ibg.ibg 
+									+picture(jpg, `${assets}s04-i1`, 'n', '')
+							li.s04__slider-item
+								.s04__slider-ibg.ibg 
+									+picture(jpg, `${assets}s04-i2`, 'n', '')
+							li.s04__slider-item
+								.s04__slider-ibg.ibg 
+									+picture(jpg, `${assets}s04-i3`, 'n', '')
+							li.s04__slider-item
+								.s04__slider-ibg.ibg 
+									+picture(jpg, `${assets}s04-i4`, 'n', '')
+							li.s04__slider-item
+								.s04__slider-ibg.ibg 
+									+picture(jpg, `${assets}s04-i1`, 'n', '')
+							li.s04__slider-item
+								.s04__slider-ibg.ibg 
+									+picture(jpg, `${assets}s04-i2`, 'n', '')
+							li.s04__slider-item
+								.s04__slider-ibg.ibg 
+									+picture(jpg, `${assets}s04-i3`, 'n', '')
+							li.s04__slider-item
+								.s04__slider-ibg.ibg 
+									+picture(jpg, `${assets}s04-i4`, 'n', '')
 		
 		//- section MOST ASK QUESTIONS
 		+questions()

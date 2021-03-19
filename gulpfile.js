@@ -11,6 +11,7 @@ const copyDependencies = require('./gulp/tasks/copyDependencies')
 const lighthouse = require('./gulp/tasks/lighthouse')
 const svgSprite = require('./gulp/tasks/svgSprite')
 
+
 function setMode(isProduction = false) {
   return cb => {
     process.env.NODE_ENV = isProduction ? 'production' : 'development'

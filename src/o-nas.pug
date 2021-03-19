@@ -1,4 +1,4 @@
-extends ../modules/layout/_layout
+extends modules/layout/_layout
 
 prepend head
 	title О нас
@@ -10,9 +10,9 @@ block footer
 	+footer(2)
 block content
 	main.main
-		section.hero 
+		section.hero.hero-o-nas
 			.hero__ibg.ibg
-				+picture-min(jpg, `${assets}hero-bg`, `${assets}hero-bg`, `sl`)
+				+picture-min(jpg, `${assets}hero-o-nas-bg`, `${assets}hero-o-nas-bg`, `sl`)
 			.container
 				+appnav('О нас').appnav--light
 				h1.hero__title О компании #[strong РЕМГВАРДИЯ]
@@ -29,47 +29,47 @@ block content
 						p Сроки ремонта от 1 дня
 		
 		//- section DIRECTOR
-		+director().s2
+		+director().s06
 		//- end DIRECTOR
 
-		section.s3 
+		section.s07 
 			.container 
-				h2.s3__title #[strong История] нашей компании
-				.s3__widget
-					.s3__tab
-						ul.s3__slide-tab.uk-slider-items
+				h2.s07__title #[strong История] нашей компании
+				.s07__widget
+					.s07__tab
+						ul.s07__slide-tab.uk-slider-items
 							- for(var i = 1; i <= 5; i++)
 								li 
-									a.s3__tab-item 1995-2000
-					.s3__slide 
-						ul.s3__slide-items.uk-switcher
+									a.s07__tab-item 1995-2000
+					.s07__slide 
+						ul.s07__slide-items.uk-switcher
 							- for(var i = 1; i <= 5; i++)
-								li.s3__slide-content 
-									p.s3__slide-title Период 1995-2000 года
-									.s3__slide-text 
+								li.s07__slide-content 
+									p.s07__slide-title Период 1995-2000 года
+									.s07__slide-text 
 										p За 15 лет работы мы сталкивались с абсолютно разным оборудованием, даже на первый взгляд не пригодным для ремонта. Только благодаря колоссальному опыту наших мастеров нам удается его привести в полностью рабочее состояние, за что мы часто получаем благодарности.
 										p Я убежден, что сервис и качество работ напрямую зависят от руководителя компании, поэтому я всегда открыт к обратной связи и вашим предложениям.
-									a.s3__slide-btn.uk-button.btn-solid-primary Следующий период
+									a.s07__slide-btn.uk-button.btn-solid-primary Следующий период
 
-		section.s4 	
+		section.s08 	
 			.container 
-				h2.s4__title #[strong Фотографии] c&nbsp;производства
-				.s4__slider(data-uk-slider)
-					+slider-nav().s4__slider-nav
-					.s4__slider-container.uk-slider-container 
+				h2.s08__title #[strong Фотографии] c&nbsp;производства
+				.s08__slider(data-uk-slider)
+					+slider-nav().s08__slider-nav
+					.s08__slider-container.uk-slider-container 
 						ul.uk-slider-items 
-							li.s4__slider-item
-								.s4__slider-ibg.ibg 
-									+picture(jpg, `${assets}s4-i1`, 'sl', '')
-							li.s4__slider-item
-								.s4__slider-ibg.ibg 
-									+picture(jpg, `${assets}s4-i1`, 'sl', '')
-							li.s4__slider-item
-								.s4__slider-ibg.ibg 
-									+picture(jpg, `${assets}s4-i1`, 'sl', '')
-							li.s4__slider-item
-								.s4__slider-ibg.ibg 
-									+picture(jpg, `${assets}s4-i1`, 'sl', '')
+							li.s08__slider-item
+								.s08__slider-ibg.ibg 
+									+picture(jpg, `${assets}s08-i1`, 'sl', '')
+							li.s08__slider-item
+								.s08__slider-ibg.ibg 
+									+picture(jpg, `${assets}s08-i1`, 'sl', '')
+							li.s08__slider-item
+								.s08__slider-ibg.ibg 
+									+picture(jpg, `${assets}s08-i1`, 'sl', '')
+							li.s08__slider-item
+								.s08__slider-ibg.ibg 
+									+picture(jpg, `${assets}s08-i1`, 'sl', '')
 								
 		//- section CONTACTS
 		+contacts()

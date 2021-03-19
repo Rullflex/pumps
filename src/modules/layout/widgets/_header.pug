@@ -32,7 +32,7 @@ mixin header(navCurrent = 0)
 				nav.uk-navbar
 					.uk-navbar-left
 						a(href="/")
-							img.img-logo.uk-logo(src=`${modules}logo.svg` alt=companyName)
+							img.img-logo.uk-logo(src!=`${modules}logo.svg` alt=companyName)
 					.uk-navbar-right
 						.d-flex.d-lg-none
 							a.uk-icon(href="#")
@@ -63,7 +63,7 @@ mixin header(navCurrent = 0)
 			.header2.d-none.d-lg-block(style="background: white")
 				nav.uk-navbar.d-none.d-lg-flex
 					a.header2__logo(href="/")
-						img.img-logo.uk-logo(src=`${modules}logo.svg` alt=companyName)
+						img.img-logo.uk-logo(src!=`${modules}logo.svg` alt=companyName)
 					ul.uk-nav
 						each item, idx in navList 
 							li
