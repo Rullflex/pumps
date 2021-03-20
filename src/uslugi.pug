@@ -4,6 +4,11 @@ prepend head
 	title Services
 	meta(name="description", content="Services")
 
+block wp_head 
+	!= `<?php /* Template Name: Услуги */ get_header(); ?>`
+block wp_foot 
+	!= '<?php get_footer(); ?>'
+
 block header
 	+header(3)
 block footer

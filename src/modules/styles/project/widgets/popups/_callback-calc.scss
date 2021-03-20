@@ -1,0 +1,16 @@
+#callback-calc {
+    .popup {
+        &__body {}
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+	#callback-calc {
+        .popup {
+            
+            &__subtitle {
+                margin-bottom: 34px;
+            }
+        }
+	}
+}

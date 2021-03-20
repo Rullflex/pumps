@@ -57,6 +57,9 @@ mixin appnav(first, second = null)
 
 mixin icon(icon, filler = primary)
 	case icon
+		when 'bigok'
+			svg(width="252" height="252" viewBox="0 0 252 252" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M180.684 0C223.398 0 252 29.988 252 74.592V177.547C252 222.012 223.398 252 180.684 252H71.442C28.728 252 0 222.012 0 177.547V74.592C0 29.988 28.728 0 71.442 0H180.684ZM178.668 88.2C174.384 83.916 167.328 83.916 163.044 88.2L111.006 140.238L88.956 118.188C84.672 113.904 77.616 113.904 73.332 118.188C69.048 122.472 69.048 129.402 73.332 133.812L103.32 163.674C105.462 165.816 108.234 166.824 111.006 166.824C113.904 166.824 116.676 165.816 118.818 163.674L178.668 103.824C182.952 99.54 182.952 92.61 178.668 88.2Z" fill=filler)
 		when 'angle-down'
 			svg(width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
 				path(d="M21.0206 1.66657L11.5114 9.67432L2.0022 1.66657" stroke=filler stroke-width="4")

@@ -4,6 +4,11 @@ prepend head
 	title Контакты
 	meta(name="description", content="Контакты")
 
+block wp_head 
+	!= `<?php /* Template Name: Контакты */ get_header(); ?>`
+block wp_foot 
+	!= '<?php get_footer(); ?>'
+
 block header
 	+header(6)
 block footer

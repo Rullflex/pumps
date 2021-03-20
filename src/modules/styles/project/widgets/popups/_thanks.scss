@@ -1,5 +1,27 @@
 #thanks {
     .popup {
-        &__body {}
+        &__body {
+            text-align: center;
+        }
+        &__ok {
+            display: block;
+            width: 10rem;
+            margin: 2rem auto;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    #thanks {
+        .popup {
+            &__body {
+            }
+            &__title {
+                font-size: 30px;
+            }
+            &__ok {
+                width: unset;
+                margin: 2rem auto;
+            }
+        }
     }
 }

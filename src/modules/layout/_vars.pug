@@ -1,5 +1,5 @@
 //- mode - development / production
-- var mode = 'development'
+//- - var mode = 'wordpress'
 //- Links 
 
 - var phoneLink = "tel:89680423151"
@@ -8,6 +8,7 @@
 - var policyLink = "/privacy-policy.pdf"
 - var licenseLink = "/license.pdf"
 
+- var homePageLink = '/'
 - var aboutPageLink = '/o-nas.html'
 - var servicesPageLink = '/uslugi.html'
 - var repaircostPageLink = '/stoimost-remonta.html'
@@ -43,15 +44,23 @@
 //- colors 
 - var primary = '#FFDB5C'
 - var secondary = '#3085EA'
-
+ 
 //-
 //- WP PRODUCTION
 //-
 - var template_directory_uri = `<?php echo get_template_directory_uri(); ?>`
 
-if mode == 'production'
-    - var aboutPageLink = '/o-nas'
-    - var servicesPageLink = '/uslugi'
+if mode == 'wordpress'
+    - var phoneLink = "tel:<?php echo $GLOBALS['pumps_time']['phone_digits'] ?>"
+    - var phoneNumber = "<?php echo $GLOBALS['pumps_time']['phone'] ?>"
+
+    - var homePageLink = '<?php echo get_home_url() ?>'
+    - var aboutPageLink = '/o-nas/'
+    - var servicesPageLink = '/uslugi/'
+    - var repaircostPageLink = '/stoimost-remonta/'
+    - var howweworkPageLink = '/kak-my-rabotaem/'
+    - var contactsPageLink = '/kontakty/'
+    - var znoPageLink = '/uslugi/zamena-nasosnogo-oborudovanija/'
 
     - var assets = `${template_directory_uri}/assets/images/`
     - var modules = `${template_directory_uri}/assets/images/`

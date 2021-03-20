@@ -4,6 +4,11 @@ prepend head
 	title Стоимость ремонта
 	meta(name="description", content="Стоимость ремонта")
 
+block wp_head 
+	!= `<?php /* Template Name: Стоимость ремонта */ get_header(); ?>`
+block wp_foot 
+	!= '<?php get_footer(); ?>'
+
 block header
 	+header(4)
 block footer

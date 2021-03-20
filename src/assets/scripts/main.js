@@ -6,6 +6,7 @@ import { App } from '../../modules/scripts/_core'
 document.addEventListener(`DOMContentLoaded`, function () {
     const app = new App()
     app.init()
+    document.querySelectorAll(`.popup`).forEach(e => e.addEventListener('beforeshow', () => UIkit.dropdown(`.header .uk-navbar-dropdown`).hide(0)))
 
     document.querySelector(`.director__link-moretext`).addEventListener(`click`, (ev) => {
         ev.preventDefault()

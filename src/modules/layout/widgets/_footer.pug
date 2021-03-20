@@ -4,8 +4,8 @@ mixin footer(navCurrent = 0)
 			a.footer__logo(href="/")
 				img(src!=`${modules}logo.svg` alt=companyName)
 			.footer__contacts
-				a.footer__btn.uk-button.btn-outline-primary.d-none.d-lg-flex(href="#callback" data-uk-toggle) Обратный звонок
-				a.footer__tel(href=phoneLink)= phoneNumber
+				a.footer__btn.uk-button.btn-outline-primary.d-none.d-lg-flex(href="#callback" data-uk-toggle="") Обратный звонок
+				a.footer__tel(href!=phoneLink)!= phoneNumber
 				p.footer__freecalltxt.d-none.d-lg-block Бесплатный звонок по России
 				ul.footer__social 
 					a(href=waLink)

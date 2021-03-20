@@ -4,6 +4,11 @@ prepend head
 	title Как мы работаем
 	meta(name="description", content="Как мы работаем")
 
+block wp_head 
+	!= `<?php /* Template Name: Как мы работаем */ get_header(); ?>`
+block wp_foot 
+	!= '<?php get_footer(); ?>'
+
 block header
 	+header(5)
 block footer
@@ -23,7 +28,7 @@ block content
 							.s09__block-num 1
 							.s09__block-title Заявка
 						.s09__block-descr Вы оставляете заявку на сайте
-						a.s09__block-btn.uk-button.btn-solid-primary.d-none.d-lg-flex Оставить заявку
+						a.s09__block-btn.uk-button.btn-solid-primary.d-none.d-lg-flex(href="#callback" data-uk-toggle="") Оставить заявку
 					.s09__block 
 						.s09__block-head 
 							.s09__block-num 2

@@ -4,6 +4,11 @@ prepend head
 	title Main
 	meta(name="description", content="Описание страницы")
 
+block wp_head 
+	!= '<?php get_header(); ?>'
+block wp_foot 
+	!= '<?php get_footer(); ?>'
+
 block header
 	+header(1)
 block footer
@@ -16,7 +21,7 @@ block content
 			.container
 				h1.hero__title #[strong Ремонт насосов,#[br] электродвигателей]#[br] и обслуживание КНС#[br] в Москве и#[br.d-lg-none] Подмосковье
 				p.hero__descr Оставляйте заявку, опишите свою ситуацию и мы рассчитаем стоимость ремонта
-				a.hero__btn.uk-button.btn-solid-primary Рассчитать стоимость
+				a.hero__btn.uk-button.btn-solid-primary(href="#callback-calc" data-uk-toggle) Рассчитать стоимость
 				ul.hero__advan 
 					li.hero__advan-item.hero__advan-item--1
 						+icon('thumb-up', 'white')

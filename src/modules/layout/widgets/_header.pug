@@ -45,7 +45,7 @@ mixin header(navCurrent = 0)
 											li
 												a(href=item.anchor class=`${navCurrent == idx + 1 ? `active` : ``}`)= item.name
 									.header__cnt
-										a.link-phone(href=phoneLink)= phoneNumber
+										a.link-phone(href!=phoneLink)!= phoneNumber
 										a.header__cnt-wa(href=waLink)
 											+icon(`social-wa`)
 									.header__gap 
@@ -54,7 +54,7 @@ mixin header(navCurrent = 0)
 						.d-none.d-lg-flex
 							.header__adress #[strong Адрес:] г. Москва,#[br] 3-й Угрешский проезд, 15
 							.header__cnt
-								a.link-phone(href=phoneLink)= phoneNumber
+								a.link-phone(href!=phoneLink)!= phoneNumber
 								.header__gap 
 									span ПН-ВС 9:00-21:00
 							a.header__cnt-wa(href=waLink)

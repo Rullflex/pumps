@@ -7,7 +7,7 @@ mixin contacts()
 					li 
 						.contacts__info-icon 
 							+icon('phone-outline', 'white')
-						a.contacts__info-phone(href=phoneLink)= phoneNumber
+						a.contacts__info-phone(href!=phoneLink)!= phoneNumber
 					li 
 						.contacts__info-icon 
 							+icon('mail-outline', 'white')

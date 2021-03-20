@@ -1,9 +1,10 @@
 .popup {
-    padding: 1rem 0;
-	background: rgba(0,0,0,.6);
+	padding: 0;
+	background: white;
     &__body {
         width: 20rem;
-        // margin-top: 0 !important; 
+        padding: 2rem 1rem;
+        margin-top: 0 !important; 
     }
     &__close {
         color: $primary;
@@ -12,38 +13,86 @@
             width: 1rem;
         }
     }
-    &__title {}
-    &__subtitle {}
-}
-@media (min-width: map-get($grid-breakpoints, md)) {
-    .popup {
-        padding: 2.5rem;
-        &__body {}
-        &__close {
-            right: -2rem;
-            top: -2rem;
-            svg {
-                width: 1.5rem;
+    &__title {
+        line-height: 1.3em;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    &__subtitle {
+        font-size: 0.8rem;
+        font-weight: normal;
+        margin-top: 0.35rem;
+        margin-bottom: 1.5rem;
+    }
+    &__form {
+        &-main {
+
+        }
+        &-input {
+            margin-bottom: 0.875rem;
+            label {
+                font-weight: 500;
+                margin-bottom: 0.4rem;
             }
         }
-        &__title {}
-        &__subtitle {}
+        &-btn {
+            width: 100%;
+            line-height: 3.4375rem;
+            margin: 1.7rem 0 0.7rem;
+        }
+        &-agr {
+            font-size: 0.6875rem;
+            line-height: 1.2em;
+            color: rgba(64, 64, 64, 0.4);
+        }
     }
 }
 @media (min-width: map-get($grid-breakpoints, lg)) {
     .popup {
-        &__body {}
+        background: rgba(0,0,0,.6);
+		padding: 15px;
+        &__body {
+            padding: 62px 118px;
+            width: 634px;
+            height: 643px;
+            box-shadow: 0px 32px 120px rgba(0, 0, 0, 0.06);
+            margin-top: auto !important;
+            margin-bottom: auto !important;
+        }
         &__close {
-            right: 1rem;
-            top: 1rem;
+            right: -38px;
+            top: -38px;
             svg {
-                width: 1.5rem;
+                width: 28px;
             }
             &:hover {
-                color: $primary;
+                color: link-hover($primary);
             }
         }
-        &__title {}
-        &__subtitle {}
+        &__title {
+            font-size: 27px;
+        }
+        &__subtitle {
+            font-size: 16px;
+			margin-top: 21px;
+            margin-bottom: 60px;
+        }
+        &__form {
+            &-main {
+    
+            }
+            &-input {
+                label {
+                    margin-bottom: 0.6875rem;
+                }
+            }
+            &-btn {
+                line-height: 5.25rem;
+                margin: 1.6875rem 0 1rem;
+                font-size: 20px;
+            }
+            &-agr {
+            }
+        }
     }
 }

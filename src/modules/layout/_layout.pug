@@ -1,26 +1,39 @@
 include _vars
 include _mixins
 
-doctype html
-html(lang="ru")
-	head
-		block head
-			meta(charset="utf-8")
-			meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
-			meta(name="format-detection" content="telephone=no")
-			meta(content="ie=edge" http-equiv="x-ua-compatible")
-			meta(property="og:image" content=`/ogimage.jpg`)
-			
-			link(rel="stylesheet" href!=stylesPath)
 
-			include includes/_favicon
-			include includes/_metrika
-	body
-		.app-wrapper
-			block header
-			block content
-			block footer
-			block popup
-				include widgets/_popups
+
+if mode != 'wordpress'
+	doctype html
+	html(lang="ru")
+		head
+			block head
+				meta(charset="utf-8")
+				meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+				meta(name="format-detection" content="telephone=no")
+				meta(content="ie=edge" http-equiv="x-ua-compatible")
+				//- meta(property="og:image" content=`/ogimage.jpg`)
+				if mode != 'wordpress'
+					link(rel="stylesheet" href!=stylesPath)
+
+				//- include includes/_favicon
+				//- include includes/_metrika
+		body
+			.app-wrapper
+				block header
+				block content
+				block footer
+				block popup
+					include widgets/_popups
 			block scripts
-				script(src!=scriptsPath defer)
+				if mode != 'wordpress'
+					script(src!=scriptsPath defer)
+else 
+	block wp_head
+	.app-wrapper
+		block header
+		block content
+		block footer
+		block popup
+			include widgets/_popups
+	block wp_foot
