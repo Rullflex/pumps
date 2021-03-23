@@ -1,11 +1,71 @@
 import 'lazysizes'
 import UIkit from 'uikit'
+import validate from 'validate.js'
 import { App } from '../../modules/scripts/_core'
 
 
 document.addEventListener(`DOMContentLoaded`, function () {
     const app = new App()
     app.init()
+
+    // CAPTURE FORM
+
+
+    document.querySelectorAll(`.capture-form`).forEach((form, idx, sets) => {
+        const phoneInput = form.querySelector('.input')
+        let mask
+        phoneInput.addEventListener(`focusin`, () => {
+            if (phoneInput.name != 'Телеграм' && phoneInput.name != 'email') {
+                
+                mask = IMask(
+                    phoneInput, {
+                        mask: `+7 (000) 000-00-00`,
+                        startsWith: `7`,
+                        lazy: false,
+                        country: `Russia`
+                    })
+            }
+        }, {once: true})
+        form.querySelectorAll('label').forEach((el, idx, set) => {
+            el.addEventListener('click', ev => {
+                if (ev.currentTarget.querySelector('input').value == 'Telegram') {
+                    if (mask !== undefined) {mask.destroy()}
+                    phoneInput.value = '@'
+                    phoneInput.type = 'text'
+                    phoneInput.name = 'Телеграм'
+                    phoneInput.placeholder = '@name'
+                    
+                } else if (ev.currentTarget.querySelector('input').value == 'Email') {
+                    if (mask !== undefined) {mask.destroy()}
+                    phoneInput.value = ''
+                    phoneInput.type = 'email'
+                    phoneInput.name = 'email'
+                    phoneInput.placeholder = 'name@email.com'
+                } else {
+                    if (mask === undefined || mask.el === undefined) {
+                        phoneInput.value = '+7'
+                        phoneInput.type = 'tel'
+                        phoneInput.name = 'Телефон'
+                        phoneInput.placeholder = '+7 (999) 999-99-99'
+                        mask = IMask(
+                            phoneInput, {
+                                mask: `+7 (000) 000-00-00`,
+                                startsWith: `7`,
+                                lazy: false,
+                                country: `Russia`
+                            }) 
+                    }
+                    
+                }
+            })
+        })
+        
+        
+    })
+    
+    
+    
+
     document.querySelectorAll(`.popup`).forEach(e => e.addEventListener('beforeshow', () => UIkit.dropdown(`.header .uk-navbar-dropdown`).hide(0)))
 
     document.querySelector(`.director__link-moretext`).addEventListener(`click`, (ev) => {

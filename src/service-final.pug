@@ -1,0 +1,81 @@
+extends modules/layout/_layout
+
+prepend head
+	title Последняя страница услуги
+	meta(name="description", content="")
+
+block wp_head 
+	!= `<?php /* Template Name: Последняя страница услуги */ get_header(); ?>`
+block wp_foot 
+	!= '<?php get_footer(); ?>'
+
+block header
+	+header(0)
+block footer
+	+footer(0)
+block content
+	main.main
+		section.hero.hero-service-final
+			.hero__ibg.ibg
+				+picture-min(jpg, `${assets}hero-zamena-nasosnogo-oborudovanija-bg`, `${assets}hero-zamena-nasosnogo-oborudovanija-bg`, `sl`)
+			.container
+				+appnav('Услуги', 'Ремонт насосного оборудования').appnav--light
+				h1.hero__title Ремонт #[strong дренажных погружных насосов]
+				p.hero__descr Оставляйте заявку, опишите свою ситуацию#[br] и&nbsp;мы рассчитаем стоимость ремонта
+				a.hero__btn.uk-button.btn-solid-primary(href="#callback-calc" data-uk-toggle) Рассчитать стоимость
+
+		section.s14 
+			.container
+				h2.s14__title #[strong Какой именно] ремонт и работы мы производим?
+				.s14__hero
+					.s14__slider(data-uk-slider)
+						+slider-nav().s14__slider-nav
+						ul.uk-slider-items 
+							li.s14__slider-item.ibg 
+								+picture(jpg, `${assets}s14-img`, 'n')
+							li.s14__slider-item.ibg 
+								+picture(jpg, `${assets}s14-img`, 'n')
+							li.s14__slider-item.ibg 
+								+picture(jpg, `${assets}s14-img`, 'n')
+					p.s14__p #[strong Проводим диагностику:] при диагностике проводиться разбор агрегата и дефектовка всех деталей, кроме этого для диагностики используем приборы для выявления влаги в обмотках статора, прибор для дефектовки подшипников, осциллограф для сравнения статорных цепей
+					p.s14__p #[strong Ремонт гидравлической части:]#[br] замена рабочего колеса, ремонт корпуса гидравлической части, замена диффузора
+					p.s14__p #[strong Ремонт электрической части:]#[br] замена обмоток статора (перемотка), замена реле уровня (поплавка), замена пускового конденсатора, силового кабеля, платы управления и др.
+					p.s14__p #[strong Ремонт механической части насосного агрегата:] замена подшипников вала, уплотнений вала, восстановление вала, проводим токарные работы, шлифовку
+					p.s14__p #[strong Проводим обслуживание дренажных насосов]
+					p.s14__p #[strong Проводим постремонтные испытания на стенде:] напор, расход, потребляемая мощность и токов
+					p.s14__p #[strong Выдаём акт диагностики, акты выполненных работ]
+		section.s15 
+			.container 
+				ul.s15__list
+					li.s15__item
+						.s15__item-icon
+							+icon('calculator', 'white')
+						p Калькуляция#[br.d-none.d-lg-inline] на ремонт
+					li.s15__item
+						.s15__item-icon
+							+icon('shield-done', 'white')
+						p Гарантия#[br.d-none.d-lg-inline] по договору
+					li.s15__item
+						.s15__item-icon
+							+icon('document', 'white')
+						p Выдаём акт работ#[br.d-none.d-lg-inline] и&nbsp;диагностики
+					li.s15__item
+						.s15__item-icon
+							+icon('document-ok', 'white')
+						p Акт постремонтных#[br.d-none.d-lg-inline] испытаний
+		section.s16 
+			.container 
+				h2.s16__title #[strong Скачайте примеры прайсов] на ремонт дренажных погружных насосов
+				a.s16__btn.uk-button.btn-solid-primary 
+					span Прайс на ремонт #[strong Grundfos KP]
+						+icon('download', '#2D2D2D')
+				a.s16__btn.uk-button.btn-solid-primary 
+					span Прайс на ремонт #[strong Pedrollo RX]
+						+icon('download', '#2D2D2D')
+				a.s16__btn.uk-button.btn-solid-primary 
+					span #[strong Регламент работ] при ремонте#[br.d-lg-none] дренажного насоса
+						+icon('download', '#2D2D2D')
+				+picture(png, `${assets}s16-price-book`, 'sl').s16__img-book
+		//- section CAPTURE
+		+capture()
+		//- end CAPTURE

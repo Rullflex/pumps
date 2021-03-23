@@ -1,4 +1,25 @@
 mixin service-kind(title, numberOfItems = 1)
+    //- if mode == 'wordpress'
+    //-     section.service-kind&attributes(attributes)
+    //-         .container 
+    //-             h2.service-kind__title!= `<?php echo carbon_get_post_meta( $post->ID, 'service_title'); ?>`
+    //-             ul.service-kind__list
+    //-                 -
+    //-                     != `<?php
+    //-                         $list = carbon_get_post_meta( $post->ID, 'services_blocks');
+    //-                         if ( ! empty( $list ) ): 
+    //-                         foreach ( $list as $item ): ?>
+    //-                             <li class="service-kind__item">
+    //-                             <div class="service-kind__item-img ibg"> 
+
+    //-                                 <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $item['photo'] ?>" alt=""/>
+    //-                             </div>
+    //-                             <p class="service-kind__item-title"><?php echo $item['title'] ?></p>
+    //-                             <p class="service-kind__item-descr"><?php echo $item['descr'] ?></p><a class="service-kind__item-btn uk-button btn-solid-primary" href="<?php echo $item['link'] ?>">Перейти</a>
+    //-                             </li>
+    //-                         <?php endforeach; 
+    //-                         endif; ?>`
+    //- else
     section.service-kind&attributes(attributes)
         .container 
             h2.service-kind__title!= '<strong>Услуги</strong> ' + title
@@ -9,4 +30,4 @@ mixin service-kind(title, numberOfItems = 1)
                             +picture(jpg, `${modules}service-kind-placeholder`, 'n')
                         p.service-kind__item-title Замена глубинного насоса
                         p.service-kind__item-descr Необходимость замены агрегата возникает зачастую из-за того, что был неправильно выполнен монтаж скважинного насоса. 
-                        a.service-kind__item-btn.uk-button.btn-solid-primary Перейти
+                        a.service-kind__item-btn.uk-button.btn-solid-primary(href="service-final.html") Перейти

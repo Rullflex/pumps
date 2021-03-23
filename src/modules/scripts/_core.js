@@ -1,6 +1,18 @@
 import IMask from 'imask'
 import UIkit from 'uikit'
 import validate from 'validate.js'
+validate.validators.isMaskComplete = function(value, options, key, attributes) {
+    if (key == "Телефон" && options == true && value != null) {
+        if (value.includes("_")) {
+            return "не корректен"
+        } else {
+            return null
+        }
+    } else {
+        return null
+    }
+  };
+  
 
 class App {
     constructor() {
@@ -299,7 +311,11 @@ class Form extends App {
               }
             },
             "Телефон": {
-                presence: true
+                presence: true,
+                isMaskComplete: true
+            },
+            "Телеграм": {
+                presence: true,
             }
         }
     }
@@ -307,6 +323,14 @@ class Form extends App {
     init(form = `form`) {
         this.disableIMask || this.phoneMask(form)
 
+        this.hookUpForm(form)
+
+        this.hookUpInputs(form)
+
+    }
+
+    
+    hookUpForm(form) {
         // Hook up the form so we can prevent it from being posted
         document.querySelectorAll(form).forEach(el => {
             el.addEventListener(`submit`, ev => {
@@ -314,7 +338,9 @@ class Form extends App {
                 this.handleFormSubmit(el)
             });
         });
+    }
 
+    hookUpInputs(form) {
         // Hook up the inputs to validate on the fly
         document.querySelectorAll(`${form} input, ${form} textarea, ${form} select`).forEach((el) => {
             el.addEventListener("change", ev => {
@@ -330,13 +356,12 @@ class Form extends App {
                 });
             }
         })
-
     }
-
 
     phoneMask(form) {
         let mask
         document.querySelectorAll(`${form} input.phone`).forEach((e) => {
+
             e.addEventListener(`focusin`, () => {
                 mask = IMask(
                     e, {
@@ -345,19 +370,28 @@ class Form extends App {
                         lazy: false,
                         country: `Russia`
                     })
-            })
-            e.addEventListener(`focusout`, () => {
-                if (mask.value.match(/_/g) != null) {
-                    e.value = null
-                    e.parentElement.classList.remove(`complete`)
-                } else {
-                    e.parentElement.classList.add(`complete`)
-                }
-                mask.destroy()
+            }, {once: true})
+            // e.addEventListener(`focusin`, () => {
+            //     mask = IMask(
+            //         e, {
+            //             mask: `+7 (000) 000-00-00`,
+            //             startsWith: `7`,
+            //             lazy: false,
+            //             country: `Russia`
+            //         })
+            // })
+            // e.addEventListener(`focusout`, () => {
+            //     if (mask.value.match(/_/g) != null) {
+            //         e.value = null
+            //         e.parentElement.classList.remove(`complete`)
+            //     } else {
+            //         e.parentElement.classList.add(`complete`)
+            //     }
+            //     mask.destroy()
 
-                e.classList.remove(`focus`)
-                e.parentElement.classList.remove(`focus`)
-            })
+            //     e.classList.remove(`focus`)
+            //     e.parentElement.classList.remove(`focus`)
+            // })
         })
     }
 

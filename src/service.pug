@@ -1,11 +1,11 @@
 extends modules/layout/_layout
 
 prepend head
-	title Замена насосного оборудования
+	title Услуга
 	meta(name="description", content="")
 
 block wp_head 
-	!= `<?php /* Template Name: Замена насосного оборудования */ get_header(); ?>`
+	!= `<?php /* Template Name: Страница услуги */ get_header(); ?>`
 block wp_foot 
 	!= '<?php get_footer(); ?>'
 
@@ -15,7 +15,7 @@ block footer
 	+footer(0)
 block content
 	main.main
-		section.hero.hero-zamena-nasosnogo-oborudovanija
+		section.hero
 			.hero__ibg.ibg
 				+picture-min(jpg, `${assets}hero-zamena-nasosnogo-oborudovanija-bg`, `${assets}hero-zamena-nasosnogo-oborudovanija-bg`, `sl`)
 			.container
@@ -23,9 +23,9 @@ block content
 				h1.hero__title Замена #[strong насосного оборудования]
 				p.hero__descr Если вы пользуетесь автономным водоснабжением и водоотведением, вероятнее всего вы знаете, что центральным элементом таких систем является насос. При этом стоит отметить, что как и любая иная техника, он нуждается в регулярном профилактическом обслуживании. Но увы, помнят об этом далеко не все и в большинстве случаев, при выявлении первых признаков поломки, «затягивают» с обращением в сервисный центр до момента, пока не потребуется срочный ремонт насосного оборудования Москва.
 
-		//- section CAPTURE
-		+service-kind('по замене насосного оборудования', 14)
-		//- end CAPTURE	
+		//- section service-kind
+		+service-kind('по замене насосного оборудования', 5)
+		//- end service-kind
 
 		//- section CAPTURE
 		+capture()
