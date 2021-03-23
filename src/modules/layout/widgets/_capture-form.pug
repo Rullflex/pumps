@@ -3,12 +3,7 @@ mixin capture-form()
 		p.capture-form__title Выберите удобный способ связи:
 		.capture-form__options 
 			label
-				input(type="radio" name='Тип связи' value="Email" checked)
-				.target
-					+icon('social-mail')
-					p E-mail
-			label
-				input(type="radio" name='Тип связи' value="Звонок")
+				input(type="radio" name='Тип связи' value="Звонок" checked)
 				.target
 					+icon('phone','white')
 					p Звонок
@@ -17,6 +12,11 @@ mixin capture-form()
 				.target
 					+icon('social-wa')
 					p WhatsApp
+			label
+				input(type="radio" name='Тип связи' value="Email")
+				.target
+					+icon('social-mail')
+					p E-mail
 			//- label
 			//- 	input(type="radio" name='Тип связи' value="Telegram")
 			//- 	.target
@@ -29,5 +29,5 @@ mixin capture-form()
 			//- 		p Viber
 		.d-lg-flex
 			.capture-form__input-wrap.input-wrap 
-				input.capture-form__input.input.input--white(type='email' name="email" placeholder="name@email.com")
+				input.capture-form__input.input.input--white(type='tel' name="Телефон" placeholder="+7 (999) 999-99-99")
 			button.capture-form__btn.uk-button.btn-solid-primary(type='submit') Получить консультацию
