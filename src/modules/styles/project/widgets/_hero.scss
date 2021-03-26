@@ -78,6 +78,28 @@
         padding-top: 3.1875rem;
         height: 31.3125rem;
         &__ibg {}
+        &__line {
+            background: rgba($color: #ffffff, $alpha: 0.2);
+            position: absolute;
+            &--1 {
+                width: 100%;
+                height: 1px;
+                top: 2rem;
+                left: 0;
+            }
+            &--2 {
+                width: 1px;
+                height: 100%;
+                left: 5vw;
+                top: 0;
+            }
+            &--3 {
+                width: 1px;
+                height: 100%;
+                right: 5vw;
+                top: 0;
+            }
+        }
         &__title {
             font-size: 3.125rem;
             margin-top: 5.5625rem;

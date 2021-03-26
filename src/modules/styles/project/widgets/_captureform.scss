@@ -41,6 +41,9 @@
             &:first-child {
                 .target {
                     border-left-style: solid;
+                    svg {
+                        width: 0.75rem;
+                    }
                 }
             }
             &:nth-child(2) {
@@ -57,10 +60,6 @@
                     }
                     &::after {
                         right: 0;
-                    }
-                    //
-                    svg {
-                        width: 0.75rem;
                     }
                 }
             }
@@ -141,7 +140,7 @@
                 cursor: pointer;
             }
             label {
-                &:nth-child(2) {
+                &:first-child {
                     .target {
                         svg {
                             width: unset;

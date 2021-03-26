@@ -8,15 +8,15 @@ mixin footer(navCurrent = 0)
 				a.footer__tel(href!=phoneLink)!= phoneNumber
 				p.footer__freecalltxt.d-none.d-lg-block Бесплатный звонок по России
 				ul.footer__social 
-					a(href=waLink)
+					a(href!=waLink target="_blank")
 						+icon(`social-wa`)
-					a(href=viberLink)
+					a(href!=viberLink target="_blank")
 						+icon(`social-viber`)
-					a(href=tgLink)
+					a(href!=tgLink target="_blank")
 						+icon(`social-tg`)
 				.footer__mail 
 					+icon(`social-mail`)
-					a.link(href=`mailto:${mailAdress}`)= mailAdress
+					a.link(href!=`mailto:${mailAdress}`)!= mailAdress
 				.footer__gap 
 					span Мы на связи с 9:00 до 21:00
 			ul.footer__nav 
@@ -31,15 +31,15 @@ mixin footer(navCurrent = 0)
 				li 
 					a(href=servicesPageLink class=`${navCurrent == 3 ? `active` : ``}`) Услуги
 					.set 
-						a.link(href='#') Ремонт электродвигателей
-						a.link(href='#') Ремонт насосного оборудования
-						a.link(href=znoPageLink) Замена насосного оборудования
-						a.link(href='#') Ремонт и обслуживание очистных#[br] сооружений ЛОС, БЛОС
-						a.link(href='#') Обслуживание КНС
-						a.link(href='#') Ремонт компрессоров
-						a.link(href='#') Ремонт генераторов
-						a.link(href='#') Ремонт тельферов
+						a.link(href='/uslugi/remont-jelektrodvigatelej/') Ремонт электродвигателей
+						a.link(href='/uslugi/remont-nasosnogo-oborudovanija/') Ремонт насосного оборудования
+						a.link(href='/uslugi/zamena-nasosnogo-oborudovanija/') Замена насосного оборудования
+						a.link(href='/uslugi/remont-i-obsluzhivanie-ochistnyh-sooruzhenij-los-blos/') Ремонт и обслуживание очистных#[br] сооружений ЛОС, БЛОС
+						a.link(href='/uslugi/obsluzhivanie-kns/') Обслуживание КНС
+						a.link(href='/uslugi/remont-kompressorov/') Ремонт компрессоров
+						a.link(href='/uslugi/remont-generatorov/') Ремонт генераторов
+						a.link(href='/uslugi/remont-telferov/') Ремонт тельферов
 			.footer__cred 
 				p.footer__rights © 2019 Компания «РЕМГВАРДИЯ»#[br] Все права защищены.
-				a.footer__policy(href=policyLink) Политика конфиденцияльности
-				a.footer__license(href=licenseLink) Лицензии
+				a.footer__policy(href!=policyLink target="_blank") Политика конфиденцияльности
+				a.footer__license(href!=licenseLink target="_blank") Лицензии

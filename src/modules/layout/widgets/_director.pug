@@ -20,4 +20,4 @@ mixin director()
                         p Можете писать на почту и я лично отвечу в течение 24 часов. 
                 .director__descr-email 
                     strong E-mail: 
-                    a.link(href=`mailto:${mailAdress}`)= mailAdress
+                    a.link(href!=`mailto:${mailAdress}`)!= mailAdress

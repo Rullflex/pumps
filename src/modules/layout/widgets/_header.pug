@@ -46,7 +46,7 @@ mixin header(navCurrent = 0)
 												a(href=item.anchor class=`${navCurrent == idx + 1 ? `active` : ``}`)= item.name
 									.header__cnt
 										a.link-phone(href!=phoneLink)!= phoneNumber
-										a.header__cnt-wa(href=waLink)
+										a.header__cnt-wa(href!=waLink target="_blank")
 											+icon(`social-wa`)
 									.header__gap 
 										span ПН-ВС 9:00-21:00
@@ -57,7 +57,7 @@ mixin header(navCurrent = 0)
 								a.link-phone(href!=phoneLink)!= phoneNumber
 								.header__gap 
 									span ПН-ВС 9:00-21:00
-							a.header__cnt-wa(href=waLink)
+							a.header__cnt-wa(href!=waLink target="_blank")
 								+icon(`social-wa`)
 							a.header__btn.uk-button.btn-outline-primary(href="#callback" data-uk-toggle="") Обратный звонок
 			.header2.d-none.d-lg-block(style="background: white")

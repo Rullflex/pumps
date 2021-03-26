@@ -68,19 +68,24 @@ document.addEventListener(`DOMContentLoaded`, function () {
 
     document.querySelectorAll(`.popup`).forEach(e => e.addEventListener('beforeshow', () => UIkit.dropdown(`.header .uk-navbar-dropdown`).hide(0)))
 
-    document.querySelector(`.director__link-moretext`).addEventListener(`click`, (ev) => {
-        ev.preventDefault()
-        ev.target.closest(`.director`).querySelectorAll(`.sm-hid`).forEach( elem => {
-            elem.classList.add('reveal')
+    if (document.querySelector(`.director__link-moretext`)) {
+        document.querySelector(`.director__link-moretext`).addEventListener(`click`, (ev) => {
+            ev.preventDefault()
+            ev.target.closest(`.director`).querySelectorAll(`.sm-hid`).forEach( elem => {
+                elem.classList.add('reveal')
+            })
+            ev.target.classList.add(`d-none`)
         })
-        ev.target.classList.add(`d-none`)
-    })
+    }
         
     // map
-    UIkit.scrollspy(`.contacts__map`)
-    document.querySelector(`.contacts__map`).addEventListener(`inview`, (event) => {
-        document.querySelector(`.contacts__map-script`).insertAdjacentHTML(`beforeend`, `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.667277934908!2d37.69852651613655!3d55.712155002593455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab4d89a045823%3A0x1ecdfec22421b7e5!2zMy3QuSDQo9Cz0YDQtdGI0YHQutC40Lkg0L_RgC3QtCwgMTUsINCc0L7RgdC60LLQsCwgMTE1MDg4!5e0!3m2!1sru!2sru!4v1616064460854!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`)
-    })
+    if (document.querySelector(`.contacts__map`)) {
+        UIkit.scrollspy(`.contacts__map`)
+        document.querySelector(`.contacts__map`).addEventListener(`inview`, (event) => {
+            document.querySelector(`.contacts__map-script`).insertAdjacentHTML(`beforeend`, `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.667277934908!2d37.69852651613655!3d55.712155002593455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab4d89a045823%3A0x1ecdfec22421b7e5!2zMy3QuSDQo9Cz0YDQtdGI0YHQutC40Lkg0L_RgC3QtCwgMTUsINCc0L7RgdC60LLQsCwgMTE1MDg4!5e0!3m2!1sru!2sru!4v1616064460854!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`)
+        })
+    }
+    
 
     // O-NAS
 
@@ -116,13 +121,15 @@ document.addEventListener(`DOMContentLoaded`, function () {
 
 
     // stoimost-remonta
-    
-    document.querySelector(`.s13__link-moretext`).addEventListener(`click`, (ev) => {
-        ev.preventDefault()
-        ev.target.closest(`.s13`).querySelectorAll(`.sm-hid`).forEach( elem => {
-            elem.classList.add('reveal')
+    if (document.querySelector(`.s13__link-moretext`)) {
+        document.querySelector(`.s13__link-moretext`).addEventListener(`click`, (ev) => {
+            ev.preventDefault()
+            ev.target.closest(`.s13`).querySelectorAll(`.sm-hid`).forEach( elem => {
+                elem.classList.add('reveal')
+            })
+            ev.target.classList.add(`d-none`)
         })
-        ev.target.classList.add(`d-none`)
-    })
+    }
+    
 
 })

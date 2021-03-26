@@ -51,8 +51,19 @@
 - var template_directory_uri = `<?php echo get_template_directory_uri(); ?>`
 
 if mode == 'wordpress'
-    - var phoneLink = "tel:<?php echo $GLOBALS['pumps_time']['phone_digits'] ?>"
-    - var phoneNumber = "<?php echo $GLOBALS['pumps_time']['phone'] ?>"
+    - var phoneLink = "tel:<?php echo $GLOBALS['pumps_globals']['phone_digits'] ?>"
+    - var phoneNumber = "<?php echo $GLOBALS['pumps_globals']['phone'] ?>"
+    - var mailAdress = "<?php echo $GLOBALS['pumps_globals']['email'] ?>"
+    - var policyLink = "<?php echo $GLOBALS['pumps_globals']['privacy_link'] ?>"
+    - var licenseLink = "<?php echo $GLOBALS['pumps_globals']['license_link'] ?>"
+
+    //- social
+    - var vkLink = "<?php echo $GLOBALS['pumps_globals']['vk_link'] ?>"
+    - var instLink = "<?php echo $GLOBALS['pumps_globals']['inst_link'] ?>"
+    - var fbLink = "<?php echo $GLOBALS['pumps_globals']['fb_link'] ?>"
+    - var tgLink = "<?php echo $GLOBALS['pumps_globals']['tg_link'] ?>"
+    - var waLink = "<?php echo $GLOBALS['pumps_globals']['wa_link'] ?>"
+    - var viberLink = "<?php echo $GLOBALS['pumps_globals']['viber_link'] ?>"
 
     - var homePageLink = '<?php echo get_home_url() ?>'
     - var aboutPageLink = '/o-nas/'

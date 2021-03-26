@@ -11,7 +11,7 @@ mixin contacts()
 					li 
 						.contacts__info-icon 
 							+icon('mail-outline', 'white')
-						a.contacts__info-mail.link(href=`mailto:${mailAdress}`)= mailAdress
+						a.contacts__info-mail.link(href!=`mailto:${mailAdress}`)!= mailAdress
 					li 
 						.contacts__info-icon 
 							+icon('pin-outline', 'white')
@@ -19,11 +19,11 @@ mixin contacts()
 				.contacts__icons
 					p Свяжитесь с нами:
 					.contacts__icons-set    
-						a(href=waLink)
+						a(href!=waLink target="_blank")
 							+icon(`social-wa`)
-						a(href=viberLink)
+						a(href!=viberLink target="_blank")
 							+icon(`social-viber`)
-						a(href=tgLink)
+						a(href!=tgLink target="_blank")
 							+icon(`social-tg`)
 				.contacts__frame
 				.contacts__widget-map.ibg 
